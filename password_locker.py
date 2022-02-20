@@ -21,3 +21,17 @@ def save_users(user):
     user.save_user()
 
 
+def find_existing_user(username):
+    """
+    Function that finds if a user account exists using the username
+    """
+    return User.find_by_username(username)
+
+
+def display_users():
+    """
+    Function that shows all the saved users.
+    """
+    
+    return User.display_users()
+
