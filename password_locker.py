@@ -78,3 +78,15 @@ def main():
             #     else:
             #         print("Invalid choice, kindly choose one of the above mentioned")
             
+        
+        elif short_code == "disp":
+            if display_users:
+                print("Here is a list of all your accounts:\n")
+
+                for user in display_users():
+                    print(f"{user.account_name} {user.login_username} {user.password}")
+                    
+                    print("\n")
+
+            else:
+                print("\n You don't seem to have any accounts yet")
