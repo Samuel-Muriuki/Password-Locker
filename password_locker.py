@@ -102,3 +102,15 @@ def main():
                 
             else:
                 print("That account doesn't exist!!!!")
+
+
+        elif short_code == "del":
+            print("Enter the username for the account that you want to delete")
+
+            delete_user = input()
+            if find_existing_user(delete_user):
+                del_user(find_existing_user(delete_user))
+                print("The account has been deleted successfully")
+
+            else:
+                print("The account selected does't exist!!!!!")
