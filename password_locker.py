@@ -90,3 +90,15 @@ def main():
 
             else:
                 print("\n You don't seem to have any accounts yet")
+
+
+        elif short_code == "fnd":
+            print("Enter the username of the account you want to find")
+
+            search_user = input()
+            if find_existing_user(search_user):
+                search_user = find_existing_user(search_user)
+                print(f"{search_user.account_name} {search_user.login_username} {search_user.password}")
+                
+            else:
+                print("That account doesn't exist!!!!")
