@@ -36,6 +36,24 @@ def display_users():
     return User.display_users()
 
 
+def del_user(username):
+    """
+    Function that deletes the selected user
+    """
+    
+    return User.delete_user(username)
+
+
+     
+def copying_password(username):
+    """
+    Function that copies the password to the clipboard.
+    """
+    
+    return User.copy_password(username)
+
+
+
 def main():
     print("Welcome to the Password Locker App!!!")
     print("\n")
