@@ -114,3 +114,26 @@ def main():
 
             else:
                 print("The account selected does't exist!!!!!")
+
+
+
+        elif short_code == "cp":
+            print("Enter the username to copy account password")
+            copying_passwd = input()
+            if find_existing_user(copying_passwd):
+                copying_password(copying_passwd)
+                print("Password was copied successfully")
+
+            else:
+                print("The username is invalid. Try again")
+                
+        elif short_code == "ext":
+            print("Have a nice day!!!!")
+            break
+        
+        else:
+            print("User input was invalid. Kindly start again. ")
+
+if __name__ == "__main__":
+    
+    main()
