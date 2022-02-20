@@ -22,3 +22,19 @@ class User:
         self.account_name = account_name
         self.login_username = login_username
         self.password = password
+
+
+    def save_user(self):
+        """
+        save_user method saves the user object in the contact list
+        """
+        
+        User.user_list.append(self)
+
+    def delete_user(self):
+        """
+        delete_user method deletes user object from the contact list
+        """
+        
+        User.user_list.remove(self)
+        
