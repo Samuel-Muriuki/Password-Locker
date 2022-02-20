@@ -56,3 +56,13 @@ class User:
             if user.login_username == username:
                 return user
             
+
+
+    @classmethod
+    def display_users(cls):
+        """
+        Method that returns a list of users when called.
+        """
+        
+        return cls.user_list
+    
