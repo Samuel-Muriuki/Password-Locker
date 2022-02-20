@@ -44,3 +44,22 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         self.assertEqual(len(User.user_list), 1)
     
+    def test_save_multiple_users(self):
+        """
+        Test case to check whether we can save multiple users.
+        """
+        
+        self.new_user.save_user()
+        test_user = User("Test-Acc", "Test-User", "Test-Password")
+        test_user.save_user()
+        self.assertEqual(len(User.user_list), 2)
+        
+    def test_delete_user(self):
+        """
+        Test case to check whether we can delete a user from our user list
+        """
+        self.new_user.save_user()
+        test_user = User("Test-Acc", "Test-User", "Test-Password")
+        test_user.save_user()
+        self.new_user.delete_user()
+        self.assertEqual(len(User.user_list), 1)
