@@ -4,7 +4,6 @@ from user_class import User
 from credentials_class import Credentials
 import pyperclip
 
-
 def create_user(acc_name, lgn_username, passwd):
     """
     Function that creates a new user

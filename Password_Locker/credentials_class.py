@@ -16,6 +16,7 @@ class Credentials:
             if passwrd == "t":
                 print("Type in your password:")
                 passw = input()
+                return passw
                 
 
             elif passwrd == "g":
@@ -37,6 +38,8 @@ class Credentials:
                 print("Your password has been auto-generated\n")
                 print(password)
                 # Credentials.auto_generated_password.append(password)
+                
+                return password
                 
                 
             break
